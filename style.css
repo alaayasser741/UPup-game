@@ -1,0 +1,138 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+button{
+    position: absolute;
+    left: 55%;
+    top: 86%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    z-index: 222;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    background-color: red;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+    display: none;
+}
+button:hover{
+    background-color: rgb(177, 3, 3);
+}
+#background{
+    z-index: -1;
+    width: 100%;
+    height: 250px;
+    position: relative;
+    top: -70px;
+}
+#Smile{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    width: fit-content;
+    display: none;
+}
+#cloud{
+    position: absolute;
+    width: 124px;
+    top: 40px;
+    right: 20px;
+    animation: cloud 4s infinite;
+    -webkit-animation: cloud 4s infinite;
+}
+#cloud2{
+    position: absolute;
+    width: 104px;
+    top: 10px;
+    left: 0;
+    animation: cloud2 4s infinite;
+    -webkit-animation: cloud2 4s infinite;
+}
+#game{
+    width: 500px;
+    height:  200px;
+    overflow: hidden;
+    border: 1px solid black;
+    position: relative;
+}
+#character{
+    width: 20px;
+    height: 50px;
+    /* background-color: red; */
+    position: relative;
+    top: 150px;
+}
+#character img{
+    width: 40px;
+    position: absolute;
+    bottom: 0;
+}
+.animate{
+    animation: block 1s;
+    -webkit-animation: jump 500ms;
+}
+#block{
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: 130px;
+    left: 480px;
+    animation: block 3s infinite;
+    -webkit-animation: block 3s infinite;
+}
+#block img{
+    width: 40px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+} 
+#stage {
+    position: absolute;
+    right: -250px;
+    top: 0px;
+}
+@keyframes jump {
+    0%{top: 150px;}
+    50%{top: 100px;}
+    70%{top: 100px;}
+    100%{top: 150px;}
+}
+@keyframes block {
+    0%{left: 480px;}
+    100%{left: -40px;}
+}
+@keyframes cloud {
+    0%{left: 480px;}
+    60%{left: -100px;}
+    100%{left: -100px;}
+}
+@keyframes cloud2 {
+    0%{left: 500px;}
+    25%{left: 500px;}
+    100%{left: -100px;}
+}
