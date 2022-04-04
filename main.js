@@ -87,6 +87,34 @@ var cloudAnimatin =
 document.getElementById('cloud');
 var cloudAnimatin2 = 
 document.getElementById('cloud2');
+var img = 
+document.getElementById('img');
+//////////////////////////////
+// const score = document.getElementById('score');
+// var ctx6 = score.getContext("2d");
+// ctx6.font = '70px Arial';
+// ctx6.fillStyle = "#0095DD";
+var scoreRes = 0
+var score = 
+document.getElementById('score');
+function clickScore(){
+    scoreRes+=1;
+    score.innerHTML ="Score: " + scoreRes;
+    if (scoreRes == 20){
+        img.src = "img/3.jpg";
+    }
+    else if (scoreRes == 30){
+        img.src = "img/4.jpg";
+    }
+    else if (scoreRes == 45){
+        img.src = "img/5.jpg";
+    }
+    else if (scoreRes == 60){
+        img.src = "img/1.jpg";
+    }
+}
+document.body.addEventListener('click',clickScore);
+//////////////////////////////////////////
 //jump function 
 function jump(){
     if (character.classList != "animate"){
@@ -108,6 +136,8 @@ var checkDead = setInterval(function(){
         block.style.display = "none";
         Smile.style.display = "block";
         btn.style.display = "block";
+        document.body.removeEventListener("click",clickScore);
+        img.src = "img/2.jpg"
         // alert("U Lose Loser")
     }
 }, 10);
