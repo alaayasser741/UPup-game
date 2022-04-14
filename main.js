@@ -1,3 +1,4 @@
+document.body.style.zoom = "115%";
 //////////////////////////////
 const canvas = document.getElementById("background");
 const ctx = canvas.getContext("2d");
